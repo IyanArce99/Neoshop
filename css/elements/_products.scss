@@ -1,0 +1,22 @@
+// TODO: Desarrollar el CSS para los productos
+.products {
+	padding-bottom: $space-xl;
+
+	&__title {
+		color: $black;
+		font-family: $titles-font;
+		font-size: em(40px);
+		margin: 40px 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(sm) {
+            font-size: em(20px);
+        }
+	}
+
+}
+
+.load {
+    text-align: center;
+}

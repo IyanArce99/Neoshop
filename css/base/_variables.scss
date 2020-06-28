@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto+Slab:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&display=swap');
+
+  // COLORS
+  $white: #FFFFFF;
+  $black: #000000;
+  $orange: #FFCC64;
+  $blue: #9EDAD3;
+
+  // FONTS
+  $body-font: 'Roboto Condensed', sans-serif;
+  $titles-font: 'Roboto Slab', serif;
+  $font-base-size: 16px;
+
+  // SPACES
+  $space-base: 16;
+  $space-m: $space-base + 0px;
+  $space-xxs: ($space-base / 8) + 0px;
+  $space-xs: ($space-base / 4) + 0px;
+  $space-s: ($space-base / 2) + 0px;
+  $space-l: ($space-base * 2) + 0px;
+  $space-xl: ($space-base * 4) + 0px;
+  $space-xxl: ($space-base * 8) + 0px;
+
+  //TRANSITIONS
+  $hover-time: 400ms ease;
+

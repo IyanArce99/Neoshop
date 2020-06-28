@@ -1,0 +1,22 @@
+.button {
+	appearance: none;
+	background-color: $black;
+	border: 2px solid $white;
+	border-radius: 5px;
+	color: $white;
+	cursor: pointer;
+    display: inline-block;
+    padding: $space-s $space-m;
+    text-transform: uppercase;
+    transition: opacity $hover-time;
+
+    &:focus, &:visited, &:active {
+		color: $white;
+		outline: 0;
+		text-decoration: none;
+    }   
+
+    &:hover {
+    	opacity: 0.8;
+    }
+}

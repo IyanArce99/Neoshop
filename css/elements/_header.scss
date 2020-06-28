@@ -1,0 +1,62 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: $space-m $space-l;
+    background-color: $white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $space-s;
+    &__button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        margin: 0 $space-s;
+        &:hover {
+            .shop__icon {
+                color: $black;
+            }
+            .shop__text {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: $space-xs;
+        color: $orange;
+        font-size: em(30px);
+        transition: 0.5s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        @include media-breakpoint-down(sm) {
+            font-size: em(25px);
+        }
+    }
+
+    &__text {
+        opacity: 0;
+        transform: translateY(20px);
+        color: $black;
+        font-family: $body-font;
+        font-size: em(14px);
+        transition: 0.5s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+         @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}

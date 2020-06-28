@@ -1,0 +1,129 @@
+// TODO: Desarrollar el CSS para el slider
+.slider {
+
+	&__dots {
+		bottom: 15px;
+		display: inline-block;
+		left: 0;
+		margin: 0 auto;
+		padding: 0;
+		position: absolute;
+		right: 0px;
+		text-align: center;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			margin: $space-xs;
+
+			button {
+				appearance: none;
+				background-color: $black;
+				border: none;
+				border-radius: 50%;
+				cursor: pointer;
+				height: 15px;
+				font-size: 0;
+				width: 15px;
+
+				&:focus, &:active, &:visited { outline: 0; }
+
+				&:hover {
+					opacity: 0.8;
+					transition: opacity $hover-time;
+				}
+			}
+
+			&.slick-active button {
+					background-color: $orange;
+				}
+		}
+	}
+
+	&__item {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex !important;
+		flex-flow: column;
+		justify-content: center;
+		height: 600px;
+		width: 100%;
+
+		@include media-breakpoint-down(md) {
+			height:450px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			height: 300px;
+		}
+	}
+
+	&__item-content {
+		align-items: flex-start;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		.slider__item:nth-child(2n) & {
+			align-items: flex-end;
+
+			@include media-breakpoint-down(sm) {
+			align-items: center;
+			text-align: center;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__next, &__prev {
+		display: inline-block;
+		color: $white;
+		cursor: pointer;
+		font-size: em(42px);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: opacity $hover-time;
+		z-index: 10;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__next {
+		right: $space-l;
+
+		@include media-breakpoint-down(md) {
+			right: $space-m;
+		}
+	}
+
+	&__prev {
+		left: $space-l;
+
+		@include media-breakpoint-down(md) {
+			left: $space-m;
+		}
+	}
+
+	&__title {
+		background-color: $orange;
+		color: $white;
+		display: inline-block;
+		font-family: $titles-font;
+		font-size: em(30px);
+		padding: $space-m $space-l;
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(sm) {
+			font-size: em(25px);
+			padding: $space-m;
+		}
+	}
+}
